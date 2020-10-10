@@ -5,7 +5,7 @@ import { pwnedAPICheck } from "./utils/passwordChecker";
 const main = async () => {
   const app: Express = express();
   app.use(cors());
-  const redis = new Redis();
+  const redis = new Redis(process.env.REDIS_URL);
   app.get(
     "/api/v1/ppass",
     async (req: Request, res: Response): Promise<Response> => {

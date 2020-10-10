@@ -6,7 +6,8 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "watch": "tsc -w",
-    "dev": "nodemon dist/index.js"
+    "dev": "nodemon dist/index.js",
+    "postinstall": "yarn build"
   },
   "license": "MIT",
   "dependencies": {

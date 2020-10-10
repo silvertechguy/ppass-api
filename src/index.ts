@@ -29,7 +29,7 @@ const main = async () => {
         }
         return res.json({ counter: +result });
       } catch (error) {
-        console.error(error);
+        return res.json({ error });
       }
     }
   );
